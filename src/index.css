@@ -1,0 +1,297 @@
+/* ===============
+   VARIABLES GLOBALES
+================= */
+:root {
+  --radius: 12px;
+  --shadow: 0 5px 18px rgba(0,0,0,0.12);
+  --dark: #1e293b;
+}
+
+/* ===============
+   BODY + FONDO SUAVE
+================== */
+body {
+  background: linear-gradient(#eef3ff, #f8fbff);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==============
+   NAVBAR PROFESIONAL
+===================*/
+.navbar-container {
+  width: 100%;
+  background: #216fed;
+  padding: 0.6rem 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* ======== MENU DESKTOP ======== */
+.menu-desktop {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #dceafe;
+}
+
+/* ======== BOTÓN MENÚ MOVIL ======== */
+.menu-mobile-btn {
+  display: none !important;
+  color: white !important;
+  font-size: 1.4rem;
+}
+
+/* ======== SIDEBAR MOVIL ======== */
+.mobile-sidebar {
+  background: white;
+  padding: 1.5rem;
+  width: 260px;
+}
+
+.sidebar-link {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.sidebar-link:hover {
+  color: #216fed;
+}
+
+
+@media (max-width: 840px) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-mobile-btn {
+    display: block !important;
+  }
+}
+
+/* ==============
+   HERO SECTION
+================== */
+
+.hero {
+  position: relative;
+  height: 70vh;
+  background-image: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.5rem auto;
+  max-width: 1200px;
+  box-shadow: var(--shadow);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.75)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: slideDown 1s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto 1.8rem auto;
+  animation: fadeIn 1.8s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  animation: floatUp 1.8s ease;
+}
+
+.hero-btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius);
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn .6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+/* ==================
+   LISTA DE POSTS
+===================== */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.btn-big {
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+}
+
+/* Card */
+.post-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow);
+  transition: 0.25s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.post-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.post-content {
+  margin-bottom: 0.8rem;
+  color: #3d3d3d;
+}
+
+.post-meta {
+  color: #777;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+
+
+/* ===============
+   FORMULARIO DE POSTS
+================== */
+
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  box-shadow: var(--shadow);
+}
+
+.input-big {
+  padding: 0.65rem !important;
+  font-size: 1.1rem !important;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Card animada */
+.animated-card {
+  animation: fadeUp 0.45s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

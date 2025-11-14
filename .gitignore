@@ -1,0 +1,15 @@
+# No subir dependencias de Node
+node_modules/
+
+# No subir entorno virtual de Python (venv)
+venv/
+.venv/
+
+# No subir build de producción
+dist/
+
+# Archivos de cache de Vite
+.vite/
+
+# Variables de entorno
+.env

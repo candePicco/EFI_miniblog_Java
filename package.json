@@ -1,0 +1,26 @@
+{
+  "name": "frontend_miniblog_final_celeste",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "jwt-decode": "^3.1.2",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.26.2",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.10"
+  }
+}
