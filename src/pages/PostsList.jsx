@@ -72,6 +72,18 @@ export default function PostsList() {
               {new Date(p.created_at).toLocaleDateString()}
             </small>
 
+            {/* 🔵 BOTÓN VER DETALLES */}
+            <div className="post-actions">
+              <Button
+                label="Ver detalles"
+                icon="pi pi-eye"
+                className="p-button-text p-button-secondary"
+                onClick={() => nav(`/posts/${p.id}/view`)}
+
+              />
+            </div>
+
+            {/* 🔵 BOTONES EDITAR / ELIMINAR SOLO SI TIENE PERMISOS */}
             {canManage(p) && (
               <div className="post-actions">
                 <Button
@@ -95,4 +107,3 @@ export default function PostsList() {
     </div>
   );
 }
-

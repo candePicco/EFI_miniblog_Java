@@ -16,14 +16,10 @@ import PostsList from "./pages/PostsList";
 import PostForm from "./pages/PostForm";
 import PostDetail from "./pages/PostDetail";  
 
-
-
-
 function PrivateRoute({ children }) {
   const { isAuthenticated } = useAuth();
   return isAuthenticated ? children : <Navigate to="/login" replace />;
 }
-
 
 export default function App() {
   return (
@@ -33,16 +29,14 @@ export default function App() {
 
         <Routes>
 
-          {}
+          {/* Página principal */}
           <Route path="/" element={<Home />} />
 
           {/* Autenticación */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* ===============
-              POSTS
-             ================ */}
+          {/* POSTS */}
           <Route
             path="/posts"
             element={
@@ -61,6 +55,7 @@ export default function App() {
             }
           />
 
+          {/* EDITAR POST */}
           <Route
             path="/posts/:id"
             element={
@@ -70,7 +65,7 @@ export default function App() {
             }
           />
 
-          {}
+          {/* VER DETALLES DEL POST (AQUÍ VAN LAS REVIEWS) */}
           <Route
             path="/posts/:id/view"
             element={
@@ -80,11 +75,8 @@ export default function App() {
             }
           />
 
-
-
-          {}
+          {/* Cualquier ruta desconocida */}
           <Route path="*" element={<Navigate to="/" />} />
-
         </Routes>
       </Router>
     </AuthProvider>

@@ -33,9 +33,7 @@ export default function Navbar() {
             <Link to="/posts" className="nav-link">Posts</Link>
           )}
 
-          {user && (
-            <Link to="/reviews" className="nav-link">Reviews</Link>
-          )}
+      
 
           {user?.role === 'admin' && (
             <Link to="/admin" className="nav-link">Panel Admin</Link>
